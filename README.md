@@ -101,6 +101,16 @@ Add cards to `Ready`. The board drains on its own.
 <p align="center"><a href="https://youtu.be/aggJvNZxfKA"><img src="https://i.ytimg.com/vi/aggJvNZxfKA/maxresdefault.jpg" alt="Watch I Built a Self-Improving Software Factory by Eric Tech on YouTube" width="100%"></a></p>
 <p align="center"><a href="https://youtu.be/aggJvNZxfKA"><strong>▶ Watch on YouTube: I Built a Self-Improving Software Factory</strong></a></p>
 
+### Intake and surface reviewers
+
+Before the Builder takes a Ready card, **intake** decides whether it is worth building here:
+accept (cutting an oversized card to a first slice), ask the author (❓ Blocked) or drop it
+(🤷 closed as not planned). It also tags what the card touches: `surface:ui`, `surface:security`.
+Cards with the `ui` surface get two read-only reviewers after QA, **ux** and **ui**, whose
+findings go to the Reviewer. Rules: [intake](skills/super-board/references/intake.md) ·
+[surface review](skills/super-board/references/surface-review.md). Turn either off with
+`intake.enabled` / `surface_review.enabled` in the config. Workflow backend only.
+
 ## Skills
 
 **9 skills (5 you type, 4 the board runs).** Uses [Matt Pocock skills](https://github.com/mattpocock/skills), ponytail, impeccable, humanizer, [Anthropic's security review](https://github.com/anthropics/claude-code-security-review) and [Cloudflare's security-audit](https://github.com/cloudflare/security-audit-skill).

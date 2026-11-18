@@ -417,6 +417,17 @@
     ]
   },
 
+  // Intake (references/intake.md): before the Builder takes a Ready card, the
+  // classify agent decides accept | needs-info | reject, may cut the scope, and
+  // tags surfaces (surface:ui, surface:security). Workflow backend only.
+  // Absent → enabled.
+  "intake": { "enabled": true },
+
+  // Surface reviewers (references/surface-review.md): on cards with the ui
+  // surface, read-only ux + ui reviewers run after QA and hand their findings
+  // to the Reviewer, who owns the bounce. Workflow backend only. Absent → enabled.
+  "surface_review": { "enabled": true },
+
   "notifications": {
     // super-board sends no messages of its own: reports go to the session and to
     // the issue/PR timeline. `channel` and `chat_id` are reserved and unused.
