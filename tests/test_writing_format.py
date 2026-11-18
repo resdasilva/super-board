@@ -27,7 +27,7 @@ SUBJECT = re.compile(
     r"[a-z0-9][a-z0-9._/-]*: \S"
 )
 COMMENT_HEADER = re.compile(
-    r"^\[(builder|qa|reviewer|collect|orchestrator)\] \[(blocker|issue|suggestion|nit|question|praise|report)\] \S"
+    r"^\[(builder|qa|reviewer|collect|orchestrator|intake|ux|ui)\] \[(blocker|issue|suggestion|nit|question|praise|report)\] \S"
 )
 TICKET_SECTIONS = ["Problem", "Context", "Fix", "Acceptance Criteria", "Risk", "Blocked by"]
 EVIDENCE_ROWS = [
@@ -195,7 +195,7 @@ def test_block_template_uses_the_header():
     heads = [b.splitlines()[0] for b in fenced(text) if b.startswith("[")]
     assert heads, "block-template.md has no header line"
     for h in heads:
-        assert re.match(r"^\[(<role>|builder|qa|reviewer|collect|orchestrator)\] \[blocker\] \S", h), h
+        assert re.match(r"^\[(<role>|builder|qa|reviewer|collect|orchestrator|intake|ux|ui)\] \[blocker\] \S", h), h
     assert "Reason tag:" in text, "super-board-deps.sh parses 'Reason tag:'"
 
 

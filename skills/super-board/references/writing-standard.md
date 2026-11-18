@@ -341,7 +341,7 @@ Next: <owner>
 
 | Field | Values |
 |---|---|
-| role (who writes it) | `builder` · `qa` · `reviewer` · `collect` · `orchestrator` |
+| role (who writes it) | `builder` · `qa` · `reviewer` · `collect` · `orchestrator` · `intake` · `ux` · `ui` |
 | label | `blocker` · `issue` · `suggestion` · `nit` · `question` · `praise` · `report` |
 | status emoji | ✅ pass/done · ❌ fail · ⏳ in progress · 🛑 blocked · 🙋 needs you · ↩️ moved back · ⚠️ warning |
 | Next | `builder` · `qa` · `reviewer` · `Eric` · `none` |
